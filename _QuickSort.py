@@ -1,5 +1,5 @@
 import random
-
+# по Ломуто
 def partition(arr, low, high):
     pivot = arr[high] # опорный элемент
     i = low - 1 # граница для элементов <= pivot
@@ -16,7 +16,7 @@ def partition(arr, low, high):
 
 def quick_sort(arr, low, high):
  
-    if low < high:
+    if low < high: # проверяем, если в массиве больше одного элемента и есть смысл его сортировать
         
         random_index = random.randint(low, high) # выбираем случайный индекс для pivot
         arr[random_index], arr[high] = arr[high], arr[random_index] #делаем случайный элемент последним, меняя их местами
@@ -27,4 +27,5 @@ def quick_sort(arr, low, high):
 
 arr = [5, 8, 2, 6, 11, 1, 7]
 quick_sort(arr, 0, len(arr) - 1)
+
 print (arr)
