@@ -26,6 +26,7 @@ def quick_sort(arr, low, high):
         quick_sort(arr, q+1, high) # рекурсивно сортируем правую часть
 
 arr = [5, 8, 2, 6, 11, 1, 7]
+print("Исходный массив:", arr)
 quick_sort(arr, 0, len(arr) - 1)
+print("Отсортированный массив:", arr)
 
-print (arr)
