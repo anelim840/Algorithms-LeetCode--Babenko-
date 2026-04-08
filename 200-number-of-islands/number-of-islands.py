@@ -4,22 +4,20 @@ class Solution(object):
             return 0
 
         def dfs(r, c):
-            # границы
+            # проверяем границы
             if r < 0 or r >= len(grid) or c < 0 or c >= len(grid[0]):
                 return
             
-            # если вода
+            
             if grid[r][c] == "0":
                 return
             
-            # затираем
             grid[r][c] = "0"
 
-            # 4 направления
-            dfs(r+1, c)
-            dfs(r-1, c)
-            dfs(r, c+1)
-            dfs(r, c-1)
+            dfs(r+1, c) #вниз
+            dfs(r-1, c) #вверх
+            dfs(r, c+1) #вправо
+            dfs(r, c-1) #влево
 
         count = 0
 
@@ -29,4 +27,4 @@ class Solution(object):
                     count += 1
                     dfs(i, j)
 
-        return count        
+        return count    
